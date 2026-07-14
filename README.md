@@ -3,9 +3,7 @@ A single-page recipe website built with plain HTML and CSS. The goal was to pres
 About the Project
 This site walks through everything needed to make a lasagna from scratch: what to gather, and how to put it together, in a clean and readable layout designed specifically for this dish.
 View the Page
-https://your-username.github.io/lasagna-recipe/
-(update this link once the repo is published on GitHub Pages)
-What's Included
+
 
 A header section styled as stacked color bands, echoing the layers of the dish itself and colored to match the Italian flag
 A full ingredients list with measurements laid out row by row
