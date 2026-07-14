@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lasagna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #f5f6f0;
+    --tomato: #cd212a;
+    --tomato-dark: #a11b22;
+    --basil: #008c45;
+    --gold: #3c9d6b;
+    --ink: #1c1c1c;
+    --paper: #fbfbf8;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height: 1.65;
+  }
+  .wrap{ max-width: 720px; margin: 0 auto; padding-bottom: 90px; }
+
+  .hero{ position: relative; overflow: hidden; }
+  .layer{ height: 34px; width: 100%; }
+  .layer.pasta{ background: var(--cream); }
+  .layer.sauce{ background: var(--tomato); }
+  .layer.cheese{ background: var(--gold); }
+  .layer.basil{ background: var(--basil); height: 10px; }
+
+  .hero-text{
+    position: relative;
+    text-align: center;
+    padding: 46px 24px 34px;
+    background: var(--paper);
+  }
+  .eyebrow{
+    font-family:'Work Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: .12em;
+    color: var(--tomato);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight: 900;
+    font-size: 52px;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .subtitle{
+    margin-top: 14px;
+    color: #4a4a46;
+    font-size: 15px;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .meta{
+    display:flex;
+    justify-content:center;
+    gap: 28px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+  }
+  .meta div{ text-align:center; }
+  .meta .num{
+    font-family:'Fraunces', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--tomato);
+  }
+  .meta .label{ font-size: 12px; color:#6b6b66; }
+
+  section{ padding: 40px 24px 0; }
+  .section-title{
+    font-family:'Fraunces', serif;
+    font-weight: 700;
+    font-size: 24px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom: 22px;
+    color: var(--ink);
+  }
+  .section-title .swatch{
+    width: 22px; height: 22px; border-radius: 4px;
+    flex-shrink:0;
+  }
+  .swatch.tomato{ background: var(--tomato); }
+  .swatch.gold{ background: var(--gold); }
+  .swatch.basil{ background: var(--basil); }
+
+  .ingredients{ display:flex; flex-direction:column; border-radius: 10px; overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+  .ing-row{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e2;
+    font-size: 15px;
+  }
+  .ing-row:last-child{ border-bottom:none; }
+  .ing-row .dot{ width: 10px; height:10px; border-radius:50%; flex-shrink:0; }
+  .ing-row .amount{ margin-inline-start:auto; color:#6b6b66; font-size:13px; white-space:nowrap; }
+
+  .steps{ list-style:none; counter-reset: step; }
+  .step{
+    counter-increment: step;
+    display:flex;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px dashed #dcdcd6;
+  }
+  .step:last-child{ border-bottom:none; }
+  .step-num{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size: 22px;
+    color: var(--tomato);
+    min-width: 34px;
+  }
+  .step-num::before{ content: counter(step); }
+  .step-body h3{
+    font-family:'Fraunces', serif;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .step-body p{ color:#3d3d3a; font-size: 14.5px; }
+
+  footer{
+    text-align:center;
+    margin-top: 50px;
+    padding: 0 24px;
+    font-size: 12px;
+    color: #9a9a94;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="layer pasta"></div>
+    <div class="layer sauce"></div>
+    <div class="layer cheese"></div>
+    <div class="layer basil"></div>
+
+    <div class="hero-text">
+      <div class="eyebrow">Classic Italian Recipe</div>
+      <h1>Lasagna</h1>
+      <p class="subtitle">Layers of pasta, tomato sauce, cheese, and ground beef — baked until golden.</p>
+
+      <div class="meta">
+        <div><div class="num">45</div><div class="label">min prep</div></div>
+        <div><div class="num">40</div><div class="label">min bake</div></div>
+        <div><div class="num">6</div><div class="label">servings</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-title"><span class="swatch tomato"></span>Ingredients</div>
+    <div class="ingredients">
+      <div class="ing-row"><span class="dot" style="background:var(--cream); border:1px solid #dcdcd6"></span> Lasagna sheets <span class="amount">12 sheets</span></div>
+      <div class="ing-row"><span class="dot" style="background:var(--tomato)"></span> Tomato sauce <span class="amount">3 cups</span></div>
+      <div class="ing-row"><span class="dot" style="background:#8b5e3c"></span> Ground beef <span class="amount">500 g</span></div>
+      <div class="ing-row"><span class="dot" style="background:#f7f7f4; border:1px solid #dcdcd6"></span> Ricotta cheese <span class="amount">2 cups</span></div>
+      <div class="ing-row"><span class="dot" style="background:var(--gold)"></span> Shredded mozzarella <span class="amount">2 cups</span></div>
+      <div class="ing-row"><span class="dot" style="background:#d8c48a"></span> Parmesan cheese <span class="amount">½ cup</span></div>
+      <div class="ing-row"><span class="dot" style="background:var(--basil)"></span> Basil or oregano <span class="amount">1 tsp</span></div>
+      <div class="ing-row"><span class="dot" style="background:#e8d9c0"></span> Garlic and onion <span class="amount">to taste</span></div>
+      <div class="ing-row"><span class="dot" style="background:#c9b896"></span> Salt and pepper <span class="amount">to taste</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><span class="swatch basil"></span>Instructions</div>
+    <ol class="steps">
+      <li class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Prepare the filling</h3>
+          <p>Sauté the onion and garlic, then add the ground beef until browned. Add the tomato sauce and seasoning, and simmer for 15 minutes.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Boil the lasagna sheets</h3>
+          <p>Cook the sheets according to package instructions until soft, then drain and lay them aside to prevent sticking.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Make the cheese layer</h3>
+          <p>Mix the ricotta with half of the parmesan and a pinch of salt and pepper.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Assemble the layers</h3>
+          <p>In a baking dish: a layer of sauce, then lasagna sheets, then the ricotta mixture, then mozzarella — repeat until ingredients are used, finishing with mozzarella and parmesan on top.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Bake</h3>
+          <p>Cover the dish with foil and bake at 180°C (350°F) for 25 minutes, then remove the foil and bake for another 15 minutes until the cheese melts and browns.</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Rest and serve</h3>
+          <p>Let the lasagna rest for 10 minutes before slicing so the layers set, then garnish with fresh basil and serve hot.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
