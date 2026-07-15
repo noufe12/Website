@@ -1,5 +1,5 @@
 🍝 Lasagna Recipe
-A single-page recipe website built with plain HTML and CSS. The goal was to present a classic lasagna recipe in a visually organized way — ingredients on one side of the logic, cooking steps on the other — without relying on any external framework.
+A single-page recipe website built with plain HTML . The goal was to present a classic lasagna recipe in a visually organized way — ingredients on one side of the logic, cooking steps on the other — without relying on any external framework.
 About the Project
 This site walks through everything needed to make a lasagna from scratch: what to gather, and how to put it together, in a clean and readable layout designed specifically for this dish.
 View the Page https://celadon-shortbread-a6ac02.netlify.app
